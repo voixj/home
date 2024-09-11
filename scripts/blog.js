@@ -1,6 +1,12 @@
 // Sample data for blog updates with release date
 const blogData = [
   {
+    title: "Improves",
+    content: "Change site colors, improve socail cards, remove fortnite leaks button on home section, remove settings... stay turn",
+    releaseDate: "2024-09-11",
+    version: "1.51"
+  },
+  {
     title: "2024 update",
     content: "Add NEW Settings on settings page, Change site colors, fix some bugs",
     releaseDate: "2024-01-19",

@@ -16,10 +16,10 @@ html{
 }
 
 :root{
-    --primaryColor: #D4C2FC;
-    --secondaryColor: #998FC7;
+    --primaryColor: #7765E3;
+    --secondaryColor: #3B60E4;
     --lightColor: #fff;
-    --bgColor-1: #28262C;
+    --bgColor-1: #000000;
     --bgColor-2: #0F0E13;
     --padding: 8%;
     --loadBG: #000;
@@ -41,7 +41,7 @@ body {
 
 .padding{
     padding: var(--padding);
-    color: #171a1c;
+    color: var(--bgColor-2);
 }
 
 .header header{
@@ -117,14 +117,32 @@ body {
     height: 100%;
     display: flex;
 
-    background-image: url('../images/bg/homeBG.jpg');
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    /* height: 100vh; */
+
+    /* background-image: url('../images/bg/homeBG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     /* background-position: center; */
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .home h1{
+    font-size: 32px;
     transition: 0.6s;
     user-select: none;
 }
@@ -259,6 +277,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 75vh;
 }
 
 .about .container-images {
@@ -301,6 +320,10 @@ p{
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
     background-color: #ccc;
     /* border: var(--lightColor) 1px solid; */
     border-radius: 8px;
@@ -317,8 +340,16 @@ p{
   
   .card h2 {
     font-size: 24px;
-    margin: 10px 0;
+    margin: 2px 0;
     /* color: #; */
+  }
+
+  .card h4 {
+    font-size: 16px;
+    margin: 8px 0;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    color: #C8ADC0;
   }
   
   .card p {
@@ -347,19 +378,42 @@ p{
     border: 2px solid var(--lightColor);
   }
   
-  /* .card.youtube {
+  .card.youtube {
     background:linear-gradient(120deg, #ff0000, #282828);
-  } */
+  }
   
   .card.insta {
     background: linear-gradient(125deg, #f9ce34, #ee2a7b, #6228d7);
+    background-size: 200% 200%;
+    animation: instaCardAnim 5s ease infinite;
+    transition: 1s;
   }
-  
+
+  .card.insta:hover{
+    scale: 1.04;
+  }
+
+  @keyframes instaCardAnim {
+    0% {
+      background-position: 0% 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+      background-position: 0% 50%;
+      /* box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3); */
+    }
+  }
+
   /* .card.twitch {
     background: linear-gradient(125deg, #692de0, #431a80);
   } */
   
   .card.discord {
+    justify-content: center;
     background: linear-gradient(-120deg, #7289da, #99aab5, #2c2f33);
   }
   
@@ -600,4 +654,53 @@ footer{
   color: var(--secondaryColor);
 }
 
+*, :after, :before {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, .5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
 /*  */

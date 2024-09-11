@@ -1,7 +1,6 @@
 const skillsData = [
-    { name: 'Coding', level: 30 },
+    { name: 'Coding', level: 50 },
     { name: 'Gaming', level: 50 },
-    { name: 'Dev apps', level: 20 },
 ];
   
 const skillsContainer = document.getElementById('skills-container');

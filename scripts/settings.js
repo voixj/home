@@ -59,7 +59,7 @@ function changeTheme(theme) {
       root.style.setProperty('--loadBG', '#fff');
       break;
     
-      case 'black':
+    case 'black':
         root.style.setProperty('--primaryColor', '#998FC7');
         root.style.setProperty('--secondaryColor', '#D4C2FC');
         root.style.setProperty('--lightColor', '#fff');
