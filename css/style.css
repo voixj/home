@@ -414,6 +414,11 @@ p{
   
   .card.discord {
     justify-content: center;
+    background-image: url('../images/dis_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: fixed;
+
     background: linear-gradient(-120deg, #7289da, #99aab5, #2c2f33);
   }
   
